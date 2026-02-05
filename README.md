@@ -29,7 +29,18 @@ your-skill/
     └── core.py        # observe → analyze → act
 ```
 
-Tests in `/tests` when you need them. Examples in `/examples` when you want them.
+## Testing (property-based)
+
+```bash
+pip install -e ".[dev]"
+pytest
+```
+
+Tests validate the **paradigm**, not just the code:
+- Friction gradient is enforced (observe never requires confirmation, act always does)
+- Wu wei is structural (models accept extra fields via `extra="allow"`)
+- Export order reflects priority (observe → analyze → act)
+- Transparency is default (all operations log)
 
 ## The Pattern (shown in code)
 

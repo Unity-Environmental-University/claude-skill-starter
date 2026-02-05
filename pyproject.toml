@@ -15,7 +15,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0.0", "mypy>=1.8.0", "ruff>=0.3.0"]
+dev = [
+    "pytest>=8.0.0",
+    "hypothesis>=6.0.0",  # Property-based testing
+    "mypy>=1.8.0",
+    "ruff>=0.3.0",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["my_skill"]
@@ -26,3 +31,8 @@ disallow_untyped_defs = false  # Types guide, don't constrain
 
 [tool.ruff]
 line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Hypothesis settings for property-based tests
+addopts = "--hypothesis-show-statistics"
