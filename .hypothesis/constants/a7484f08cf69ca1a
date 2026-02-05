@@ -1,4 +1,0 @@
-# file: /Users/hallie/Documents/repos/unity/claude-skills/skill-starter/my_skill/__init__.py
-# hypothesis_version: 6.142.5
-
-['0.1.0', 'act_create_issue', 'analyze_patterns', 'observe_issues']
