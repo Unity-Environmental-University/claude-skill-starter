@@ -2,6 +2,8 @@
 Property-based tests for the paradigm itself.
 
 Not testing "does it work" - testing "does it enforce the philosophy."
+
+See docs/friction-gradient.md for explanation of the pattern.
 """
 
 import pytest

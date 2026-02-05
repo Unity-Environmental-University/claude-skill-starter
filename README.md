@@ -13,9 +13,12 @@ pip install -e .
 
 ## Three Principles (in code, not words)
 
-1. **Observe before act** → See `__init__.py` export order
-2. **Types flex** → See `extra="allow"` in models
-3. **Friction teaches** → See confirmation in `act_*()`
+1. **Friction gradient** → Different operations have different resistance (see [docs/friction-gradient.md](docs/friction-gradient.md))
+   - Observe = no friction (no confirmation, always safe)
+   - Analyze = medium friction (might cost resources)
+   - Act = high friction (requires `confirm=True`)
+2. **Types flex** → See `extra="allow"` in models (API evolves, we accept it)
+3. **Structure teaches** → Export order reflects priority (observe → analyze → act)
 
 ## Structure
 
