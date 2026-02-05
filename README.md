@@ -1,52 +1,47 @@
-# Claude Skill Starter
+# Quantum Context
 
-Minimal template for making Claude skills. Philosophy is in the structure, not the docs.
+Observer-relative knowledge graph using wave function compression.
 
-## Use It
+## Install
 
 ```bash
-cp -r skill-starter your-skill
-cd your-skill
-# Rename my_skill → your_skill everywhere
 pip install -e .
 ```
 
-## Three Principles (in code, not words)
+## Use
 
-1. **Friction gradient** → Different operations have different resistance (see [docs/friction-gradient.md](docs/friction-gradient.md))
-   - Observe = no friction (no confirmation, always safe)
-   - Analyze = medium friction (might cost resources)
-   - Act = high friction (requires `confirm=True`)
-2. **Types flex** → See `extra="allow"` in models (API evolves, we accept it)
-3. **Structure teaches** → Export order reflects priority (observe → analyze → act)
+```python
+from quantum_context import observe_context, analyze_dependencies, act_record
 
-## Structure
+# Observe (low friction)
+amplitude = observe_context("authentication")
 
-```
-your-skill/
-├── skill.md           # What Claude sees (example included, just edit)
-├── pyproject.toml     # Metadata
-└── my_skill/
-    ├── __init__.py    # Export order = priority
-    ├── models.py      # extra="allow" everywhere
-    └── core.py        # observe → analyze → act
+# Analyze (medium friction)
+deps = analyze_dependencies("authentication")
+
+# Act (high friction - requires confirmation)
+act_record("auth", "requires", "identity", confidence=0.6, confirm=True)
 ```
 
-## Testing (property-based)
+## Philosophy
 
-```bash
-pip install -e ".[dev]"
-pytest
-```
+The universe is a holographic projection from ℤ where any integer can be the origin.
 
-Tests validate the **paradigm**, not just the code:
-- Friction gradient is enforced (observe never requires confirmation, act always does)
-- Wu wei is structural (models accept extra fields via `extra="allow"`)
-- Export order reflects priority (observe → analyze → act)
-- Transparency is default (all operations log)
+- **Measurements** = observations with confidence from an observer frame
+- **Wave functions** = compressed representation preserving divisibility
+- **Interference** = relationships via quantum amplitude
+- **Confidence ceiling** = 0.7 without evidence (epistemic humility)
 
-## The Pattern (shown in code)
+## Storage
 
-Look at the actual files. The structure teaches.
+`~/.quantum-context/graph.ndjson` - portable, git-friendly, append-only
 
-That's it.
+## See Also
+
+- `skill.md` - How Claude uses this
+- `RESPONSIBLE_USE.md` - Safety and ethics
+- `quantum_context/core.py` - Implementation (200 lines)
+
+---
+
+*Measure. Compress. Interfere. Understand.*

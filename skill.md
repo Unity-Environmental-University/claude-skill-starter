@@ -1,83 +1,93 @@
-# github-issues
+# quantum-context
 
-Observe, analyze, and act on GitHub issues using cybernetic principles.
+Observer-relative knowledge graph using wave function compression.
 
 ## Core Concepts
 
-- **Issue Flow**: Issues move through states (open → triaged → closed)
-- **Velocity**: Rate of issue creation vs resolution
-- **Friction**: Deliberate barriers prevent hasty actions
+- **Measurement**: Observer records (subject, predicate, object, confidence)
+- **Wave Function**: Compressed representation preserving divisibility structure
+- **Frame**: Observer's reference point (which integer is "1")
+- **Interference**: Relationships via quantum amplitude |ψ(A)·ψ(B)|²
 
 ## Operations
 
-### observe issues [repo]
-Check current issue state without side effects.
+### observe context [subject]
+Read measurements about a subject. No side effects.
 
-**Returns:** Issue counts, velocity metrics, health indicators
+**Returns:** Wave function amplitude, related concepts, confidence
 
-**When:** Always start here. Observation is cheap.
+**When:** Always start here. Observation is cheap and frame-independent.
 
-### analyze patterns [repo]
-Identify trends in issue creation, closure, and staleness.
+### analyze dependencies [subject]
+Identify divisibility structure (what concepts does this depend on?)
 
-**Returns:** Pattern analysis, recommendations, warnings
+**Returns:** Dependency graph, shared structure, independence measures
 
-**When:** After observing. Before acting.
+**When:** After observing. Before acting. Understanding causal structure.
 
-### act create-issue [repo] [title] [body]
-Create a new issue (requires confirmation).
+### act record [subject] [predicate] [object]
+Add measurement to graph (requires confirmation).
 
-**Returns:** Created issue details
+**Returns:** Updated wave function, new interference patterns
 
-**When:** Only after observation + analysis. With explicit confirmation.
+**When:** Only after observation + analysis. Explicit confirmation required.
 
 ## Example Interaction
 
-**Human:** "Check what's happening with issues in anthropics/claude-code"
+**Human:** "What do we know about authentication?"
 
 **Claude:**
 ```python
-# 1. Observe first (low friction)
-state = observe_issues("anthropics/claude-code")
-# → Shows: 42 open, 8 created this week, velocity: +2/week
+# 1. Observe (low friction)
+amplitude = observe_context("authentication")
+# → ψ coefficients, related concepts, confidence scores
 
-# 2. Analyze if needed (medium friction)
-patterns = analyze_patterns("anthropics/claude-code")
-# → Shows: Increasing bug reports, feature requests stable
+# 2. Analyze (medium friction)
+deps = analyze_dependencies("authentication")
+# → Depends on: identity, encryption, sessions
+# → Independent of: rendering, caching
 
-# 3. Only act if appropriate (high friction)
-# User must explicitly request creation
+# 3. Only act if needed (high friction)
+# User must explicitly request recording
 ```
 
 ## Procedural Rhetoric
 
 Using this skill teaches:
-- **Observe before action** - Can't act without seeing first
-- **Understanding before intervention** - Analysis precedes action
-- **Deliberate participation** - Confirmation required for writes
+- **Observation precedes action** - Must read graph before writing
+- **Causal structure matters** - Dependencies = divisibility relationships
+- **Frame awareness** - Different observers see different projections
+- **Interference is real** - Related concepts constructively interfere
 
 ## Technical
 
-Wraps GitHub API via `httpx`. Observation uses unauthenticated endpoints. Analysis and actions require `GITHUB_TOKEN`.
+Storage: NDJSON measurements at `~/.quantum-context/graph.ndjson`
 
-Python client embodies wu wei through:
-- `extra="allow"` in models (API evolves, we accept it)
-- Read operations frictionless
-- Write operations require confirmation
+Wave function: `ψ(entity,t) = Σ aₙ(t)·φₙ(entity)` fitted from measurements
+
+Math: Shor's algorithm equivalence - wave interference preserves prime divisibility
+
+Philosophy:
+- Measurements = integers in prime space (implicit)
+- Wave functions = efficient compression via quantum interference
+- Divisibility = causal/temporal ordering
+- Frames = choice of origin in ℤ ring
 
 ## Usage Context
 
 Appropriate for:
-- Researching issue patterns
-- Monitoring project health
-- Responsible issue creation
-- Educational use
+- AI instance continuity (context across sessions)
+- Multi-agent shared knowledge
+- Causal reasoning (what depends on what)
+- Observer-relative truth
 
 NOT for:
-- Mass issue creation
-- Automated closing without human oversight
-- Circumventing rate limits
+- Exact symbolic proofs (use logic, not waves)
+- Real-time performance (fitting takes time)
+- Absolute truth claims (all observation is relative)
 
 ---
 
-*Observe the system. Understand the patterns. Act deliberately.*
+*The universe is a holographic projection from ℤ where any integer can be the origin.*
+
+Measure. Compress. Interfere. Understand.
